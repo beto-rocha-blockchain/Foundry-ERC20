@@ -18,8 +18,8 @@ Este repositório foi desenvolvido como parte do Bootcamp **O Grande Código** d
   - **Cast**: Canivete suíço para interagir com contratos inteligentes EVM, enviar transações e obter dados da blockchain.
   - **Anvil**: Nó Ethereum local para desenvolvimento, similar ao Ganache ou Hardhat Network.
   - **Chisel**: REPL para Solidity, rápido e utilitário.
-- **Solidity**: Linguagem de programação para contratos inteligentes na Ethereum.
-- **Cursor IDE**: Ambiente de desenvolvimento com IA integrada, que facilita o aprendizado e a correção de erros.
+  - **Solidity**: Linguagem de programação para contratos inteligentes na Ethereum.
+  - **Cursor IDE**: Ambiente de desenvolvimento com IA integrada, que facilita o aprendizado e a correção de erros.
 
 ## 📚 Estrutura do Projeto
 
