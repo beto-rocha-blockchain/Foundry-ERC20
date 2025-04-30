@@ -13,7 +13,7 @@ Este repositório foi desenvolvido como parte do Bootcamp **O Grande Código** d
 
 ## 🧰 Tecnologias Utilizadas
 
-- **[Foundry](https://github.com/foundry-rs/foundry)**: Toolkit rápido, portátil e modular para desenvolvimento de aplicações Ethereum. Inclui:
+  - **[Foundry](https://github.com/foundry-rs/foundry)**: Toolkit rápido, portátil e modular para desenvolvimento de aplicações Ethereum. Inclui:
   - **Forge**: Ferramenta para compilar, testar, fazer fuzzing, depurar e implantar contratos Solidity.
   - **Cast**: Canivete suíço para interagir com contratos inteligentes EVM, enviar transações e obter dados da blockchain.
   - **Anvil**: Nó Ethereum local para desenvolvimento, similar ao Ganache ou Hardhat Network.
