@@ -1,66 +1,90 @@
-## Foundry
+![Solidity](https://img.shields.io/badge/Solidity-363636?style=flat&logo=solidity&logoColor=white)
+![Foundry](https://img.shields.io/badge/Foundry-FE7A16?style=flat&logo=rust&logoColor=white)
+![Forge](https://img.shields.io/badge/Forge-000000?style=flat&logo=forge&logoColor=white)
+![Anvil](https://img.shields.io/badge/Anvil-FF6F61?style=flat&logo=ethereum&logoColor=white)
+![Cursor](https://img.shields.io/badge/Cursor%20IDE-3C3C3C?style=flat&logo=visualstudiocode&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+![ZkVerify](https://img.shields.io/badge/ZkVerify-004AAD?style=flat&logo=zero&logoColor=white)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-Foundry consists of:
+# Playground
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Este repositório foi desenvolvido como parte do Bootcamp **O Grande Código** da NearX, com o objetivo de explorar e consolidar conhecimentos em desenvolvimento de contratos inteligentes utilizando o ecossistema Foundry.
 
-## Documentation
+## 🧰 Tecnologias Utilizadas
 
-https://book.getfoundry.sh/
+- **[Foundry](https://github.com/foundry-rs/foundry)**: Toolkit rápido, portátil e modular para desenvolvimento de aplicações Ethereum. Inclui:
+  - **Forge**: Ferramenta para compilar, testar, fazer fuzzing, depurar e implantar contratos Solidity.
+  - **Cast**: Canivete suíço para interagir com contratos inteligentes EVM, enviar transações e obter dados da blockchain.
+  - **Anvil**: Nó Ethereum local para desenvolvimento, similar ao Ganache ou Hardhat Network.
+  - **Chisel**: REPL para Solidity, rápido e utilitário.
+- **Solidity**: Linguagem de programação para contratos inteligentes na Ethereum.
+- **Cursor IDE**: Ambiente de desenvolvimento com IA integrada, que facilita o aprendizado e a correção de erros.
 
-## Usage
+## 📚 Estrutura do Projeto
 
-### Build
+O projeto segue a estrutura padrão de um projeto Foundry:
 
-```shell
-$ forge build
+- `src/`: Contém os contratos Solidity.
+- `test/`: Contém os testes para os contratos.
+- `script/`: Scripts para implantação e interações com os contratos.
+- `lib/`: Dependências externas.
+- `foundry.toml`: Arquivo de configuração do Foundry.
+
+## 📗 Comandos Básicos
+
+### Compilar Contratos
+
+```bash
+forge build
 ```
 
-### Test
+### Executar Testes
 
-```shell
-$ forge test
+```bash
+forge test
 ```
 
-### Format
+### Formatar Código
 
-```shell
-$ forge fmt
-```
+'''bash
+forge fmt
+'''
 
-### Gas Snapshots
+### Iniciar Nó Local (Anvil)
 
-```shell
-$ forge snapshot
-```
+'''bash
+anvil
+'''
 
-### Anvil
+### Implantar Contrato
 
-```shell
-$ anvil
-```
+'''bash
+forge script script/Counter.s.sol:CounterScript --rpc-url <seu_rpc_url> --private-key <sua_chave_privada>
+'''
 
-### Deploy
+### Interagir Com Contratos
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+'''bash
+cast <subcomando>
+'''
 
-### Cast
+## 🔨 Importância do Foundry
 
-```shell
-$ cast <subcommand>
-```
+O Foundry oferece uma abordagem moderna e eficiente para o desenvolvimento de contratos inteligentes, com destaque para:
 
-### Help
+- Desempenho Superior: Compilação e testes mais rápidos em comparação com outras ferramentas como Hardhat.
+- Testes Avançados: Suporte a fuzzing e testes de invariantes diretamente em Solidity.
+- Integração Facilitada: Ferramentas como Anvil e Cast simplificam o desenvolvimento e a interação com contratos.
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Essas características tornam o Foundry uma escolha ideal para projetos profissionais, especialmente aqueles que visam integrar soluções como o ZkVerify, onde desempenho e confiabilidade são cruciais.
+
+## 🪙 Implementação do Padrão ERC-20
+
+A implementação do token ERC-20 foi realizada utilizando a linguagem Solidity, seguindo as diretrizes estabelecidas pelo padrão. O contrato inclui as funções obrigatórias, como totalSupply, balanceOf, transfer, approve, transferFrom e allowance, garantindo a conformidade com o padrão e a interoperabilidade com outras aplicações e serviços na rede Ethereum.​
+
+Além disso, foram adicionadas funções auxiliares para facilitar operações como mint e burn, permitindo a criação e destruição de tokens conforme necessário. Essa abordagem proporciona flexibilidade na gestão do fornecimento total de tokens e é útil para simulações e testes em ambientes de desenvolvimento.
+
+## 🎯 Objetivo
+
+Este projeto serve como um ambiente de testes e aprendizado para o desenvolvimento de contratos inteligentes utilizando o Foundry. A combinação do Foundry com o Cursor IDE proporciona uma experiência de desenvolvimento aprimorada, facilitando a identificação e correção de erros, além de acelerar o processo de aprendizado.
