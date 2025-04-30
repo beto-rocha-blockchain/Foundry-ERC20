@@ -9,7 +9,7 @@
 
 # Playground
 
-Este repositório foi desenvolvido como parte do Bootcamp **O Grande Código** da **[NearX](https://github.com/nrxschool), com o objetivo de explorar e consolidar conhecimentos em desenvolvimento de contratos inteligentes utilizando o ecossistema Foundry.
+Este repositório foi desenvolvido como parte do Bootcamp **O Grande Código** da **[NearX](https://github.com/nrxschool)**, com o objetivo de explorar e consolidar conhecimentos em desenvolvimento de contratos inteligentes utilizando o ecossistema Foundry.
 
 ## 🧰 Tecnologias Utilizadas
 
