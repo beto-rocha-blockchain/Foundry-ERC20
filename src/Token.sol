@@ -2,6 +2,7 @@
 pragma solidity ^0.8.13;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 contract Token {
     string private _name = "Bootcamp";
     string private _symbol = "OCG";
@@ -35,6 +36,12 @@ import {Ownale} from "./Ownable.sol";
 import {Pausable} from "./Pausable.sol";
 import {ReentrancyGuard} from "./ReentrancyGuard.sol";
 
+=======
+import {Ownale} from "./Ownable.sol";
+import {Pausable} from "./Pausable.sol";
+import {ReentrancyGuard} from "./ReentrancyGuard.sol";
+
+>>>>>>> Stashed changes
 contract Token is Ownable, Pausable, ReentrancyGuard {
     string public name;        
     string public symbol;
@@ -105,6 +112,14 @@ contract Token is Ownable, Pausable, ReentrancyGuard {
 
     function allowance(address owner, address spender) public return (uint256) {
         return _allowance[owner][spender];
+    }
+
+    function withdraw() public noReentrant {
+        uint256 amount = balanceOf[msg.sender];
+
+        address(msg.sender).call(value: amount)("");
+
+        balanceOf(msg.sender) -= amount;
     }
 
     function withdraw() public noReentrant {
